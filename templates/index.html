@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Free and reliable URL Shortener. Create short links quickly and customize them to suit your needs. Perfect for tiny URLs and managing links.">
+    <meta name="keywords" content="little url, URL shortener, free URL shortener, tiny URL, custom URL shortener, link shortene, free URL shortner">
+    <meta name="author" content="Little URL">
+    <title>Little URL - Link Smarter, Share Easier!</title> 
+    <style>
+        .little-url-content {
+            margin: 0 auto ;
+        }
+        .little-url-form {
+            text-align: center;
+            margin-top: 150px;
+
+        }
+        input {
+            width: 400px;
+            padding: 10px;
+            border: 2px solid #555;
+            color: #000;
+        }
+        button {
+            padding: 10px;
+            border: 2px solid #555;
+            background-color: rgb(11, 154, 25);
+            color: #fff !important;
+            font-weight: bold;
+        }
+        .little-url-form p {
+            font-size: 20px;
+
+        }
+        button.copy-btn {
+            padding: 10px 20px;
+            border: 2px solid #117f5a;
+            border-radius: 25px;
+            background-color: rgb(42, 143, 52);
+            color: #fff !important;
+            font-weight: bold;
+        }
+        .little-url-logo {
+            width: 200px;
+        }
+        .little-url-logo img {
+            width: 100%;
+        }
+        .little-url-form h1 {
+            margin: 0 auto 30px;
+            text-align: center;
+            width: 430px;
+        }
+    </style>   
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script></head>
+<body>
+    <div class="little-url-container">
+        <div class="little-url-content container">
+            <header>
+                <div class="little-url-navigation-menu-bar">
+                    
+                    <div class="little-url-navigation-menu">
+                        <nav class="navbarnavbar-light navbar-fixed">
+                            <div class="little-url-logo-container">
+                                <div class="little-url-logo">
+                                    <a class="navbar-brand" href="/">
+                                        <img src="./little-url-logo.png" alt="Little URL Logo">
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            <ul class="nav navbar-nav navbar-right">
+                                <li class="active"><a href="/">Home</a></li>
+                                <li><a href="#">Contact Us</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </header>
+            <div class="little-url-form">
+                <h1>Little URL - Link Smarter, Share Easier!</h1>
+                <form method="POST">
+                    <!-- <label for="original_url">Paste your URL Below</label><br> -->
+                    <input type="url" id="original_url" name="original_url" placeholder="Enter URL to be Shortened" required>
+                    <button type="submit">Shorten</button>
+                </form>
+                <br>
+                {% if short_url %}
+                    <p>Your short URL: <a href="/{{ short_url }}" target="_blank">{{ request.host }}/{{ short_url }}</a></p>
+                    <button class="copy-btn" onclick="copyToClipboard('{{ request.url_root }}{{ short_url }}')">Copy Shortened URL</button>
+                {% endif %}
+            </div>
+        </div>
+        
+    </div>
+</body>
+<script src="./script.js"></script>
+</html>
