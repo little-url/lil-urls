@@ -48,7 +48,7 @@ jobs:
       run: |
         echo "Building Flet app with GITHUB_REPOSITORY: ${GITHUB_REPOSITORY}"
         flutter config --no-analytics
-        flet build web --module-name main --base-url ${GITHUB_REPOSITORY#*/} --route-url-strategy hash
+        flet build web --module-name app --base-url ${GITHUB_REPOSITORY#*/} --route-url-strategy hash
 
     - name: Upload Artifact
       uses: actions/upload-pages-artifact@v3
