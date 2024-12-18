@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="About page for our website.">
+    <title>About Us</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='favicon.svg') }}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <div class="lil-urls-container">
+        <div class="lil-urls-content container">
+            <header>
+                <div class="lil-urls-navigation-menu-bar">
+                    <div class="lil-urls-navigation-menu">
+                        <nav class="navbarnavbar-light navbar-fixed">
+                            <div class="lil-urls-logo-container">
+                                <div class="lil-urls-logo">
+                                    <a class="navbar-brand" href="/">
+                                        <img src="{{ url_for('static', filename='lil-urls-logo.png') }}"
+                                            alt="Lil URLs Logo">
+                                    </a>
+                                </div>
+                            </div>
+                            <ul class="nav navbar-nav navbar-right">
+                                <li class="active"><a href="/">Home</a></li>
+                                <li><a href="/privacy-policy">Privacy Policy</a></li>
+                                <li><a href="/terms-and-conditions"> Terms and Conditions</a></li>
+                                <li><a href="/about">About Us</a></li>
+                                <li><a href="/contact">Contact Us</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </header>
+
+            <div class="content">
+                <h1>About Us</h1>
+                <p>We are a dedicated team committed to providing excellent products and services to our customers. Our
+                    mission is to ensure that you receive the best possible experience in every interaction with us.
+                    Whether it's our top-quality products or our excellent customer service, we strive to make a
+                    difference in your life.</p>
+
+                <h2>Our Story</h2>
+                <p>Founded in [Year], we started with a small team and a big vision. Over the years, we have grown,
+                    expanded our services, and reached customers across the globe. Despite our growth, we still maintain
+                    the same core values that led to our success: dedication, integrity, and a customer-first approach.
+                </p>
+
+                <h2>Meet the Team</h2>
+                <p>Our team is comprised of experts in their respective fields who share a passion for delivering
+                    exceptional results. From our engineers to our customer support specialists, each team member plays
+                    a crucial role in making sure your experience with us is nothing short of excellent.</p>
+                
+                <h2>Contact Us</h2>
+                <p>If you have any questions or concerns regarding these Terms and Conditions, please contact us at: <a href="/contact">Contact Us</a></p>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 Lil URLs. All Rights Reserved.</p>
+    </footer>
+</body>
+
+</html>

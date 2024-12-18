@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Privacy Policy page of our website.">
+    <title>Privacy Policy</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='favicon.svg') }}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <div class="lil-urls-container">
+        <div class="lil-urls-content container">
+            <header>
+                <div class="lil-urls-navigation-menu-bar">
+                    <div class="lil-urls-navigation-menu">
+                        <nav class="navbarnavbar-light navbar-fixed">
+                            <div class="lil-urls-logo-container">
+                                <div class="lil-urls-logo">
+                                    <a class="navbar-brand" href="/">
+                                        <img src="{{ url_for('static', filename='lil-urls-logo.png') }}"
+                                            alt="Lil URLs Logo">
+                                    </a>
+                                </div>
+                            </div>
+
+                            <ul class="nav navbar-nav navbar-right">
+                                <li class="active"><a href="/">Home</a></li>
+                                <li><a href="/privacy-policy">Privacy Policy</a></li>
+                                <li><a href="/terms-and-conditions"> Terms and Conditions</a></li>
+                                <li><a href="/about">About Us</a></li>
+                                <li><a href="/contact">Contact Us</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </header>
+
+            <div class="content">
+                <h1>Privacy Policy</h1>
+                <p>Welcome to [Your Company Name]. Your privacy is important to us. This Privacy Policy outlines the
+                    types of information we collect, how we use it, and your rights regarding the information you
+                    provide to us.</p>
+
+                <h2>Information We Collect</h2>
+                <p>We collect personal information that you provide directly to us, such as when you register on our
+                    site, subscribe to our newsletter, or make a purchase. This may include your name, email address,
+                    phone number, payment details, and any other information you choose to provide.</p>
+
+                <h2>How We Use Your Information</h2>
+                <p>We use the information we collect to:
+                <ul>
+                    <li>Provide, maintain, and improve our services.</li>
+                    <li>Process transactions and send related information, such as purchase confirmations and invoices.
+                    </li>
+                    <li>Communicate with you regarding updates, promotions, and customer support inquiries.</li>
+                    <li>Ensure the security of our site and prevent fraud.</li>
+                </ul>
+                </p>
+                <h2>Cookies and Tracking Technologies</h2>
+                <p>We use cookies and similar tracking technologies to enhance your experience on our site. Cookies are
+                    small files stored on your device that help us remember your preferences and improve site
+                    performance.</p>
+
+                <h2>Your Data Protection Rights</h2>
+                <p>You have the right to access, correct, or delete your personal data. If you wish to exercise any of
+                    these rights, please contact us through our website or by email. We will respond to your request in
+                    accordance with applicable data protection laws.</p>
+
+                <h2>Data Security</h2>
+                <p>We take reasonable precautions to protect your personal data from unauthorized access, use, or
+                    disclosure. However, no method of transmission over the internet is completely secure, and we cannot
+                    guarantee the absolute security of your data.</p>
+
+                <h2>Third-Party Links</h2>
+                <p>Our website may contain links to third-party websites. We are not responsible for the privacy
+                    practices or the content of these external sites. We encourage you to read their privacy policies
+                    before sharing any personal information.</p>
+
+                <h2>Changes to This Privacy Policy</h2>
+                <p>We may update this Privacy Policy from time to time. Any changes will be posted on this page with an
+                    updated date. We encourage you to review this policy periodically to stay informed about how we are
+                    protecting your information.</p>
+
+                <h2>Contact Us</h2>
+                <p>If you have any questions or concerns about our Privacy Policy, please contact us at: <a href="/contact">Contact Us</a></p>
+
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 Lil URLs. All Rights Reserved.</p>
+    </footer>
+</body>
+
+</html>

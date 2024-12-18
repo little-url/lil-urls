@@ -1,102 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Free and reliable URL Shortener. Create short links quickly and customize them to suit your needs. Perfect for tiny URLs and managing links.">
-    <meta name="keywords" content="little url, URL shortener, free URL shortener, tiny URL, custom URL shortener, link shortene, free URL shortner">
-    <meta name="author" content="Little URL">
-    <title>Little URL - Link Smarter, Share Easier!</title> 
-    <style>
-        .little-url-content {
-            margin: 0 auto ;
-        }
-        .little-url-form {
-            text-align: center;
-            margin-top: 150px;
-
-        }
-        input {
-            width: 400px;
-            padding: 10px;
-            border: 2px solid #555;
-            color: #000;
-        }
-        button {
-            padding: 10px;
-            border: 2px solid #555;
-            background-color: rgb(11, 154, 25);
-            color: #fff !important;
-            font-weight: bold;
-        }
-        .little-url-form p {
-            font-size: 20px;
-
-        }
-        button.copy-btn {
-            padding: 10px 20px;
-            border: 2px solid #117f5a;
-            border-radius: 25px;
-            background-color: rgb(42, 143, 52);
-            color: #fff !important;
-            font-weight: bold;
-        }
-        .little-url-logo {
-            width: 200px;
-        }
-        .little-url-logo img {
-            width: 100%;
-        }
-        .little-url-form h1 {
-            margin: 0 auto 30px;
-            text-align: center;
-            width: 430px;
-        }
-    </style>   
- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <meta name="description" content="Simplify your links with Lil-URLs – the best free URL shortener. Shorten, share, and track URLs for social media, blogs, emails, and more with ease.">
+    <meta name="keywords" content="short url, url shortener, free url shortener, custom url, shorten link, best url shortener, short link generator, URL tracker, link shortener">
+    <meta name="author" content="Lil-URLs">
+    <title>Lil-URLs - Free URL Shortener</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='favicon.svg') }}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
+
 <body>
-    <div class="little-url-container">
-        <div class="little-url-content container">
+    <div class="lil-urls-container">
+        <div class="lil-urls-content container">
             <header>
-                <div class="little-url-navigation-menu-bar">
-                    
-                    <div class="little-url-navigation-menu">
+                <div class="lil-urls-navigation-menu-bar">
+
+                    <div class="lil-urls-navigation-menu">
                         <nav class="navbarnavbar-light navbar-fixed">
-                            <div class="little-url-logo-container">
-                                <div class="little-url-logo">
+                            <div class="lil-urls-logo-container">
+                                <div class="lil-urls-logo">
                                     <a class="navbar-brand" href="/">
-                                        <img src="{{ url_for('static', filename='little-url-logo.png') }}" alt="Little URL Logo">
+                                        <img src="{{ url_for('static', filename='lil-urls-logo.png') }}"
+                                            alt="Lil URLs Logo">
                                     </a>
                                 </div>
                             </div>
-                            
+
                             <ul class="nav navbar-nav navbar-right">
                                 <li class="active"><a href="/">Home</a></li>
-                                <li><a href="#">Contact Us</a></li>
+                                <li><a href="/privacy-policy">Privacy Policy</a></li>
+                                <li><a href="/terms-and-conditions"> Terms and Conditions</a></li>
+                                <li><a href="/about">About Us</a></li>
+                                <li><a href="/contact">Contact Us</a></li>
                             </ul>
                         </nav>
                     </div>
                 </div>
             </header>
-            <div class="little-url-form">
-                <h1>Little URL - Link Smarter, Share Easier!</h1>
+
+            <div class="lil-urls-form">
+                <h1>Lil URLs - Link Smarter, Share Easier!</h1>
                 <form method="POST">
                     <!-- <label for="original_url">Paste your URL Below</label><br> -->
-                    <input type="url" id="original_url" name="original_url" placeholder="Enter URL to be Shortened" required>
-                    <button type="submit">Shorten</button>
+                    <input type="url" id="original_url" name="original_url" placeholder="Enter URL to be Shortened"
+                        required>
+                    <button type="submit">Make URL Little</button>
                 </form>
                 <br>
                 {% if short_url %}
-                    <p>Your short URL: <a href="/{{ short_url }}" target="_blank">{{ request.host }}/{{ short_url }}</a></p>
-                    <button class="copy-btn" onclick="copyToClipboard('{{ request.url_root }}{{ short_url }}')">Copy Shortened URL</button>
+                <p>Your short URL: <a href="/{{ short_url }}" target="_blank">{{ request.host }}/{{ short_url }}</a></p>
+                <button class="copy-btn" onclick="copyToClipboard('{{ request.url_root }}{{ short_url }}')">Copy
+                    Shortened URL</button>
                 {% endif %}
             </div>
-        </div>
+            <main>
+                <section>
+                    <h2>Simplify Your Links with Lil-URLs – The Best Free URL Shortener!</h2>
+                    <p>Transform long, messy URLs into short, sleek links in seconds. Lil-URLs is your go-to platform for shortening links from 
+                        <a href="https://www.instagram.com/">Instagram</a>,
+                        <a href="https://www.Facebook.com/">Facebook</a>,
+                        <a href="https://www.YouTube.com/">YouTube</a>,
+                        <a href="https://www.x.com/">Twitter</a>,
+                        <a href="https://www.LinkedIn.com/">LinkedIn</a>,
+                        <a href="https://www.WhatsApp.com/">WhatsApp</a>,
+                        <a href="https://www.TikTok.com/">TikTok</a>,
+                        <a href="https://www.blogger.com/">blogs</a>,
+                         and more. Simply paste your long URL, hit the "Shorten URL" 
+                         button, and share the customized link anywhere you like. 
+                         It's that easy!</p>
+
+                </section>
         
+                <section>
+                    <h2>Why Choose Lil-URLs?</h2>
+                    <ul>
+                        <li><strong>Fast and Simple:</strong> No sign-ups or hassle—shorten your URL instantly.</li>
+                        <li><strong>Custom Links:</strong> Personalize your shortened URLs for a professional look.</li>
+                        <li><strong>Track Your Success:</strong> Monitor clicks with detailed analytics to measure your link performance.</li>
+                        <li><strong>Free Forever:</strong> Enjoy unlimited link shortening at no cost.</li>
+                    </ul>
+                </section>
+        
+                <section>
+                    <h2>Shorten, Share, and Track with Ease</h2>
+                    <p>Your short links are perfect for use in emails, advertisements, blogs, forums, instant messages, and social media. Track your business or project’s success by analyzing the number of clicks each URL receives with our powerful click tracker.</p>
+                </section>
+        
+                <section>
+                    <h2>Perfect for Businesses and Individuals</h2>
+                    <p>Lil-URLs is the ideal solution for anyone who wants to:</p>
+                    <ul>
+                        <li>Promote content on social media with clean, memorable links.</li>
+                        <li>Drive traffic to their website or online store.</li>
+                        <li>Streamline links for presentations, marketing campaigns, and more.</li>
+                    </ul>
+                </section>
+        
+                <section>
+                    <p><strong>Start shortening your URLs now with Lil-URLs – the free, customizable, and reliable URL shortener!</strong></p>
+                </section>
+            </main>
+        </div>
     </div>
+    <footer>
+        <p>&copy; 2024 Lil URLs. All Rights Reserved.</p>
+    </footer>
 </body>
 <script src="./script.js"></script>
+
 </html>
