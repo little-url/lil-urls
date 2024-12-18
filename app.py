@@ -30,6 +30,26 @@ def init_db():
     except sqlite3.Error as e:
         print(f"Error initializing database: {e}")
 
+# Route for the About page
+@app.route('/about')
+def about():
+    return render_template('about.html')
+
+# Route for the Privacy Policy page
+@app.route('/privacy-policy')
+def privacy_policy():
+    return render_template('privacy-policy.html')
+
+# Route for the Terms and Conditions page
+@app.route('/terms-and-conditions')
+def terms_and_conditions():
+    return render_template('terms-and-conditions.html')
+
+# Route for the Contact page
+@app.route('/contact')
+def contact():
+    return render_template('contact.html')
+
 @app.route('/', methods=['GET', 'POST'])
 def home():
     if request.method == 'POST':
