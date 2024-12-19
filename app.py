@@ -1,4 +1,4 @@
-from flask import Flask, request, redirect, render_template
+from flask import Flask, request, redirect, render_template, send_from_directory
 import sqlite3
 import random
 import string
@@ -29,6 +29,12 @@ def init_db():
         print("Database initialized successfully. Table 'urls' is ready.")
     except sqlite3.Error as e:
         print(f"Error initializing database: {e}")
+
+# Naver Webmaster
+@app.route('/naver5c4a6906d96087628527fd8a11ed9709.html')
+def google_verification():
+    # Serve the static verification file
+    return send_from_directory('static', 'naver5c4a6906d96087628527fd8a11ed9709.html')
 
 # Route for the About page
 @app.route('/about')
